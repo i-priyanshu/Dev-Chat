@@ -76,10 +76,22 @@
             required
           />
           <label>Room</label>
-          <input type="text" name="room" placeholder="Room" required />
+          <input
+            type="text"
+            name="room"
+            placeholder="Room"
+            class="room_input"
+            required
+          />
           <button>Join</button>
+          <button class="public_room">Join Public Room</button>
         </form>
       </div>
     </div>
+    <script>
+      document.querySelector(".public_room").addEventListener("click", () => {
+        document.querySelector(".room_input").value = "Public";
+      });
+    </script>
   </body>
 </html>
