@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Leisure Chat</title>
-    <link rel="stylesheet" href="./css/styles.min.css" />
+    <title>Dev Chat</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <link rel="icon" href="./img/favicon.png" />
   </head>
   <body>
@@ -19,9 +25,13 @@
               required
               autocomplete="off"
             />
-            <button>Submit</button>
+            <button>
+              <i class="fa fa-location-arrow" aria-hidden="true"></i>Submit
+            </button>
           </form>
-          <button id="send-location">Send location</button>
+          <button id="send-location">
+            <i class="fa fa-map-marker"></i> Send location
+          </button>
         </div>
       </div>
     </div>
@@ -42,8 +52,8 @@
           <span class="message__name">{{username}}</span>
           <span class="message__meta">{{createdAt}}</span>
         </p>
-        <p>
-          <a href="{{url}}" target="_blank"> My current Location</a>
+        <p class="location_link">
+          <a href="{{url}}" target="_blank">My current Location</a>
         </p>
       </div>
     </script>

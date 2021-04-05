@@ -64,13 +64,13 @@ socket.on("roomData", ({ room, users }) => {
 });
 
 socket.on("locationMessage", (location) => {
-  console.log(location.url);
   const html = Mustache.render(locationTemplate, {
     username: location.username,
     url: location.url,
     createdAt: moment(location.createdAt).format("h:mm A"),
   });
   $messages.insertAdjacentHTML("beforeend", html);
+  autoscroll();
 });
 
 $messageForm.addEventListener("submit", (e) => {
