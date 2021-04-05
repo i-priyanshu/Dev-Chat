@@ -96,7 +96,7 @@ button:disabled {
 
 .centered-form__box {
   box-shadow: 0px 0px 17px 1px #1d1f26;
-  background: #f7f7fa;
+  background: #ffffffa6;
   padding: 24px;
   width: 250px;
 }
@@ -110,6 +110,23 @@ button:disabled {
   width: 100%;
 }
 
+.public_room {
+  margin-top: 10px;
+}
+
+.display_name {
+  border-radius: 1rem;
+}
+
+.join_button {
+  border-radius: 1rem;
+  background: #6c3ad8b9;
+}
+
+button:focus {
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
 /* Chat Page Layout */
 
 .chat {
@@ -193,10 +210,11 @@ p.location_link {
 /* Chat Sidebar Styles */
 
 .room-title {
-  font-weight: 400;
-  font-size: 22px;
+  font-weight: 300;
+  font-size: 30px;
   background: #232323;
-  padding: 24px;
+  padding: 30px;
+  text-transform: uppercase;
 }
 
 .list-title {
@@ -206,19 +224,19 @@ p.location_link {
   padding: 12px 24px 0 24px;
 }
 
-#particles-js {
-  background: rgb(255, 99, 71);
-}
-
 .users {
   list-style-type: none;
   font-weight: 300;
   padding: 12px 24px 0px 24px;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 .users li {
   margin-bottom: 6px;
+}
+#room_title {
+  background: tomato;
+  margin-bottom: 30px;
 }
 
 *::-webkit-scrollbar {
