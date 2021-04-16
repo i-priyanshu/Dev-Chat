@@ -119,3 +119,8 @@ socket.emit("join", { username, room }, (error) => {
     location.href = "/";
   }
 });
+
+const darkMode = () => {
+  var element = document.querySelector(".chat__main");
+  element.classList.toggle("dark-mode");
+};

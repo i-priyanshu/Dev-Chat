@@ -61,6 +61,14 @@ button:disabled {
   background: #7c5cbf94;
 }
 
+img {
+  position: relative;
+  width: 15rem;
+  top: 2%;
+  left: 10px;
+  font-size: 2rem;
+}
+
 #send-location {
   background: rgb(0, 194, 103);
 }
@@ -139,6 +147,7 @@ button:focus {
   background: #333744;
   width: 225px;
   overflow-y: scroll;
+  transition: all 0.4s ease;
 }
 
 /* Chat styles */
@@ -148,6 +157,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   max-height: 100vh;
+  transition: all 0.4s ease;
 }
 
 .chat__messages {
@@ -182,6 +192,31 @@ p.location_link {
 
 /* Message Composition Styles */
 
+.header {
+  display: flex;
+}
+.toggle {
+  position: relative;
+  left: 60%;
+
+  width: 2rem;
+  background: none;
+  font-size: 2rem;
+}
+
+.toggle:hover {
+  background: none;
+}
+.toggle:focus {
+  transform: scale(1);
+  outline: none;
+}
+
+.dark-mode {
+  background: #232323;
+  color: rgb(184, 183, 183);
+}
+
 .compose {
   display: flex;
   flex-shrink: 0;
@@ -196,11 +231,17 @@ p.location_link {
 }
 
 .compose input {
-  border: 1px solid #eeeeee;
   width: 100%;
   padding: 12px;
-  margin: 0 16px 0 0;
+  margin: 0 12px 0 0;
   flex-grow: 1;
+  background: rgb(233, 230, 230);
+}
+
+.dark-mode input {
+  border: none;
+  background: rgba(88, 88, 88, 0.836);
+  color: whitesmoke;
 }
 
 .compose button {
@@ -259,4 +300,21 @@ p.location_link {
 
 #sidebar::-webkit-scrollbar-track {
   background: #232323;
+}
+
+@media only screen and (max-width: 600px) {
+  .chat__sidebar {
+    transform: translateX(-100%);
+  }
+  .chat__main {
+    transform: translateX(-50%);
+    margin-right: -16rem;
+    margin-left: 17px;
+  }
+  .toggle {
+    left: 30%;
+  }
+  svg {
+    z-index: 2;
+  }
 }
